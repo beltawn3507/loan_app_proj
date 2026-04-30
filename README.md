@@ -8,8 +8,8 @@ Full-stack Loan Management System that manages the complete lifecycle of a loan 
 ### 1. Clone Repository
 
 ```bash
-git clone <your-repo-url>
-cd loan-management-system
+git clone https://github.com/beltawn3507/loan_app_proj.git
+cd loan_app_proj
 
 cd server
 npm install
