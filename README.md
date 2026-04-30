@@ -65,6 +65,7 @@ cd loan-management-system
 
 cd server
 npm install
+```
 
 .env setup
 MONGO_URI=your_mongodb_uri
@@ -73,6 +74,7 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
+```
 npm run dev
 npm run build
 npm run start
@@ -81,8 +83,8 @@ cd client
 npm install
 npm run dev
 
-npx ts-node src/scripts/seed.ts
 
+```
 ---
 
 ## 🌱 Seed Data (Pre-created Users)
@@ -93,6 +95,7 @@ To make testing easier, the system includes pre-seeded users for each role.
 
 ```bash
 npx ts-node src/scripts/seed.ts
+```
 
 | Role         | Email                                                 | Password |
 | ------------ | ----------------------------------------------------- | -------- |
