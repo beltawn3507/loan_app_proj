@@ -12,8 +12,10 @@ import type {
   PaymentPayload,
 } from "@/types";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
 export const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: API_URL,
   withCredentials: true,
   timeout: 5000,
 });
@@ -76,7 +78,7 @@ export async function signup(
   email: string,
   password: string
 ) {
-  const res = await fetch("http://localhost:3000/api/users/signup", {
+  const res = await fetch(`${API_URL}/api/users/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

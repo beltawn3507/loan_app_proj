@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  client:
+    build:
+      context: ./client
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:3000
+    container_name: next-client
+    ports:
+      - "3001:3001"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
+    depends_on:
+      - backend
+    restart: always
+
+  backend:
+    build: ./server
+    container_name: loan-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./server/.env
+    restart: always
